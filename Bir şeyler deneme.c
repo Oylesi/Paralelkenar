@@ -1,23 +1,25 @@
-﻿// Bir şeyler deneme.c
+// Paralelkenar yapımı 16.11.2023
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main()
 {
-    int num1, num2, num3;
+    int y, x, num3=-1;
 
-    for (num1 = 10; num1 >= 0; num1--)
+    for (y = 9; y >= 0; y--)
     {
-        for (num2 = 0; num2 <= 10+num1; num2++)
+        num3++;
+
+        for (x = 0; x <= 9+num3; x++)
         {
-            if (num2 >= num1)
+            if (y < 9-x)
             {
-                printf("*");
+                printf(" ");
             }
             else
             {
-                printf(" ");
+                printf("*");
             }
 
         }
